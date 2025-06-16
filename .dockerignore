@@ -1,0 +1,8 @@
+.idea
+bin
+target
+.dockerignore
+.editorconfig
+Dockerfile
+HELP.md
+uploads

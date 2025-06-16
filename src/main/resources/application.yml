@@ -1,0 +1,46 @@
+spring:
+    datasource:
+       url:  jdbc:mysql://localhost:3306/bcmea_expo?sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false
+       username: root
+       password: root
+
+    jpa:
+      show-sql: true
+      hibernate:
+          ddl-auto: update
+          naming:
+              physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      properties:
+          hibernate:
+              dialect: org.hibernate.dialect.MySQL8Dialect
+          javax:
+              persistence:
+                  validation:
+                      mode: none
+
+    servlet:
+        multipart:
+          enabled: true
+          location: ${java.io.tmpdir}
+          max-file-size: 3MB
+          max-request-size: 3MB
+
+application:
+  security:
+    jwt:
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
+  sms_token: 1011912373916965742599971f62a8cb50ca0219cf848c293ab50
+
+  phoneNumber: 01712882332
+  email: betafore@gmail.com
+  password: 123
+  enabled: true
+  role: SUPER_ADMIN
+
+  customCipherConfig:
+      encoder:
+          secret: 01$3456789A4C71#
+          iv: 01$3456789A4C71#
