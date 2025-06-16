@@ -8,12 +8,10 @@ import java.util.Optional;
 
 @Repository
 public interface GiftCountRepository extends JpaRepository<GiftCount,Long> {
-
-
     Optional<GiftCount> findByUserIdAndGiftId(Long userId, Long giftId);
 
     @Query("""
-         select g from GiftCount  g where g.id =? 1
+         select g from GiftCount  g where g.id =?1
         """)
     Optional<GiftCount> findByGiftCountId(Long id);
 

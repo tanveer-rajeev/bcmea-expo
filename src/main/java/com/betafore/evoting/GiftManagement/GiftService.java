@@ -15,8 +15,6 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Service
 public class GiftService implements GiftDao {
-
-
     private final GiftRepository giftRepository;
     private final FileStorageServiceImp fileStorageServiceImp;
     private final UserRepository userRepository;
