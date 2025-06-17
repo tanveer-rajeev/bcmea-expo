@@ -58,3 +58,13 @@ jobs:
         mysql -h 127.0.0.1 -uroot -proot -e 'CREATE DATABASE IF NOT EXISTS bcmea_expo;'
     - name: Build with Maven
       run: mvn clean install
+
+    - name: Build & push Docker image
+      uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+          image: rajeeb99/bcmea-repo
+          tags: latest
+          registry: docker.io
+          dockerfile: Dockerfile
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}

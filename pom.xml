@@ -155,5 +155,6 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>expo-management</finalName>
     </build>
 </project>
