@@ -1,7 +1,6 @@
-package com.betafore.evoting.EmailConfig;
+package com.betafore.evoting.EmailService;
 
 import com.betafore.evoting.Exception.CustomException;
-import com.betafore.evoting.security_config.CustomCipherService;
 import jakarta.activation.DataHandler;
 import jakarta.activation.DataSource;
 import jakarta.activation.FileDataSource;
@@ -43,7 +42,6 @@ public class EmailSenderServiceImpl implements EmailSenderService {
     private void sendEmail(Session session, String toEmail, String subject, String body, String profileName, String from) throws CustomException {
         try {
             MimeMessage msg = new MimeMessage(session);
-            //set message headers
             msg.addHeader("Content-type", "text/HTML; charset=UTF-8");
             msg.addHeader("format", "flowed");
             msg.addHeader("Content-Transfer-Encoding", "8bit");
@@ -118,7 +116,6 @@ public class EmailSenderServiceImpl implements EmailSenderService {
         props.put("mail.smtp.port", "465"); //SMTP Port
         return props;
     }
-
 
     public void sendAttachmentEmail(Session session, String toEmail, String subject, String body) {
         try {

@@ -1,7 +1,7 @@
 package com.betafore.evoting.UserManagement;
 
-import com.betafore.evoting.EmailConfig.EmailSenderServiceImpl;
-import com.betafore.evoting.EmailConfig.SendEmailDto;
+import com.betafore.evoting.EmailService.EmailSenderServiceImpl;
+import com.betafore.evoting.EmailService.SendEmailDto;
 import com.betafore.evoting.Exception.CustomException;
 import com.betafore.evoting.ExpoManagement.ExpoRepository;
 import com.betafore.evoting.GiftManagement.Gift;
@@ -10,7 +10,7 @@ import com.betafore.evoting.GiftManagement.GiftCountService;
 import com.betafore.evoting.GiftManagement.GiftService;
 import com.betafore.evoting.SeminarManagement.Seminar;
 import com.betafore.evoting.SeminarManagement.SeminarService;
-import com.betafore.evoting.SmsConfig.SMS_SendServiceImpl;
+import com.betafore.evoting.SmsService.SMS_SendServiceImpl;
 import com.betafore.evoting.security_config.CustomCipherService;
 import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;

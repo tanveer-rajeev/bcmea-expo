@@ -18,7 +18,7 @@ public interface LotteryRepository extends JpaRepository<Lottery, Long> {
     Integer totalLottery(Long expoId);
 
     @Query("""
-        select l from Lottery l where l.state = "RUNNING" and l.expoId =?1
+        select l from Lottery l where l.state = 'RUNNING' and l.expoId =?1
         """)
     List<Lottery> findAllRunningLottery(Long expoId);
 

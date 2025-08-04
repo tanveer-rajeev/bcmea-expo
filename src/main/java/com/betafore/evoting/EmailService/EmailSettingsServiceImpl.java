@@ -1,7 +1,6 @@
-package com.betafore.evoting.EmailConfig;
+package com.betafore.evoting.EmailService;
 
 import com.betafore.evoting.Exception.CustomException;
-import com.betafore.evoting.security_config.CustomCipherService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

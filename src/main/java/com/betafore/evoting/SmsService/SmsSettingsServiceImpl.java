@@ -1,4 +1,4 @@
-package com.betafore.evoting.SmsConfig;
+package com.betafore.evoting.SmsService;
 
 import com.betafore.evoting.Exception.CustomException;
 import com.betafore.evoting.security_config.CustomCipherService;
@@ -7,7 +7,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.util.Base64;
 import java.util.Optional;
 
 @Service

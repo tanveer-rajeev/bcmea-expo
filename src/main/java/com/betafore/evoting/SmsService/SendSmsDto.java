@@ -1,4 +1,4 @@
-package com.betafore.evoting.SmsConfig;
+package com.betafore.evoting.SmsService;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

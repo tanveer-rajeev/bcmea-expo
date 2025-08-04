@@ -1,4 +1,4 @@
-package com.betafore.evoting.SmsConfig;
+package com.betafore.evoting.SmsService;
 
 import com.betafore.evoting.Exception.ApiResponse;
 import com.betafore.evoting.Exception.CustomException;

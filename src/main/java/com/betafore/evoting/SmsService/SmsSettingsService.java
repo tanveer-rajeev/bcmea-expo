@@ -1,8 +1,5 @@
-package com.betafore.evoting.SmsConfig;
+package com.betafore.evoting.SmsService;
 import com.betafore.evoting.Exception.CustomException;
-
-import java.io.IOException;
-import java.util.List;
 
 public interface  SmsSettingsService {
 

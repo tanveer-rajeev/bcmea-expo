@@ -1,7 +1,7 @@
 package com.betafore.evoting.OtpManagement;
 
-import com.betafore.evoting.EmailConfig.EmailSenderService;
-import com.betafore.evoting.EmailConfig.SendEmailDto;
+import com.betafore.evoting.EmailService.EmailSenderService;
+import com.betafore.evoting.EmailService.SendEmailDto;
 import com.betafore.evoting.Exception.CustomException;
 import com.betafore.evoting.OrganizerManagement.Organizer;
 import com.betafore.evoting.OrganizerManagement.OrganizerRepository;

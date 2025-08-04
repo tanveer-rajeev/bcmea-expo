@@ -151,6 +151,4 @@ public class OrganizerController {
                 .data(organizerService.resetPassword(resetPasswordDto, expoId))
                 .build());
     }
-
-
 }

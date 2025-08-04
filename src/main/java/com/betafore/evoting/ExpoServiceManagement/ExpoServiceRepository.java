@@ -8,13 +8,14 @@ import java.util.Optional;
 public interface ExpoServiceRepository extends JpaRepository<ExpoService,Long> {
 
     Optional<ExpoService> findByName(String name);
+
     @Query("""
-              select e from ExpoService e where e.name =?1 and e.status = "enable"
+              select e from ExpoService e where e.name =?1 and e.status = 'enable'
         """)
     Optional<ExpoService> findEnableServiceByName(String name);
 
     @Query("""
-              select e from ExpoService e where e.id =?1 and e.status = "enable"
+              select e from ExpoService e where e.id =?1 and e.status = 'enable'
         """)
     Optional<ExpoService> findEnableServiceById(Long id);
 

@@ -9,7 +9,6 @@ import java.util.Optional;
 
 @Repository
 public interface VIP_GuestRepository extends JpaRepository<VIP_Guest,Long> {
-
     @Query("""
           select v from VIP_Guest v where v.expoId =?1
         """)

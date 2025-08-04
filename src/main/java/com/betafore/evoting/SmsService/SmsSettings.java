@@ -1,4 +1,4 @@
-package com.betafore.evoting.SmsConfig;
+package com.betafore.evoting.SmsService;
 
 import com.betafore.evoting.entities.BaseEntity;
 import jakarta.persistence.Column;

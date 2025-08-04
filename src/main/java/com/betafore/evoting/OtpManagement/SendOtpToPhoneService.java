@@ -1,9 +1,7 @@
 package com.betafore.evoting.OtpManagement;
 
-import com.betafore.evoting.EmailConfig.EmailSenderService;
-import com.betafore.evoting.EmailConfig.SendEmailDto;
 import com.betafore.evoting.Exception.CustomException;
-import com.betafore.evoting.SmsConfig.SMS_SendServiceImpl;
+import com.betafore.evoting.SmsService.SMS_SendServiceImpl;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

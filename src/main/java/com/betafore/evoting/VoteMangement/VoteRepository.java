@@ -9,8 +9,6 @@ import java.util.List;
 
 @Repository
 public interface VoteRepository extends JpaRepository<Vote, Long> {
-
-
     List<VoteList> findAllByExpoId(Long expoId);
 
     List<VoteList> findAllByHall_Slug(String hallSlug);

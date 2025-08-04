@@ -1,4 +1,4 @@
-package com.betafore.evoting.SmsConfig;
+package com.betafore.evoting.SmsService;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -11,7 +11,6 @@ import java.util.Optional;
 
 @Repository
 public interface StallRepository extends JpaRepository<Stall, Long> {
-
     Optional<Stall> findBySlug(String slug);
 
     Optional<Stall> findByName(String slug);

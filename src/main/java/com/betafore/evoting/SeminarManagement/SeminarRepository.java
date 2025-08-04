@@ -10,7 +10,6 @@ import java.util.Set;
 
 @Repository
 public interface SeminarRepository extends JpaRepository<Seminar,Long> {
-
     @Query("""
           select s from Seminar s where s.expoId =?1
         """)

@@ -1,12 +1,15 @@
-package com.betafore.evoting.SmsConfig;
+package com.betafore.evoting.SmsService;
 
 import com.betafore.evoting.Exception.CustomException;
-import com.betafore.evoting.security_config.CustomCipherService;
-import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import okhttp3.*;
+import okhttp3.FormBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
 
@@ -16,7 +19,6 @@ import java.io.IOException;
 public class SMS_SendServiceImpl implements SmsSendService {
 
     private final SmsSettingsRepository smsSettingsRepository;
-    private final CustomCipherService customCipherService;
 
     @Override
     @Transactional
@@ -46,10 +48,7 @@ public class SMS_SendServiceImpl implements SmsSendService {
                 throw new CustomException("Sms sending failed. Response: " + responseBody);
             }
         } catch (IOException e) {
-
             throw new CustomException("Sms sending operation goes wrong: " + e.getMessage());
         }
-
     }
-
 }

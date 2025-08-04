@@ -1,4 +1,4 @@
-package com.betafore.evoting.EmailConfig;
+package com.betafore.evoting.EmailService;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

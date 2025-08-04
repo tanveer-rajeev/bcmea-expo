@@ -9,7 +9,6 @@ import java.util.Optional;
 
 @Repository
 public interface WinnerRepository extends JpaRepository<Winner,Long> {
-
     Optional<Winner> findByUserId(Long userId);
     Optional<Winner> findByUserIdAndLotteryId(Long id,Long expoId);
 

@@ -1,9 +1,7 @@
 package com.betafore.evoting.security_config;
 
 import com.betafore.evoting.Exception.CustomException;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Value;
-
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
@@ -38,7 +36,6 @@ public class CustomCipherService {
             throw new RuntimeException(ex);
         }
     }
-
 
     public String encodeLong(Long id) {
         try {

@@ -1,4 +1,4 @@
-package com.betafore.evoting.security_config;
+package com.betafore.evoting.Config;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeIn;

@@ -11,6 +11,5 @@ import java.lang.annotation.*;
 @Target({ElementType.METHOD})
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public @interface CustomHasAuthority {
-
     PermissionEnum authorities();
 }

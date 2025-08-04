@@ -1,18 +1,13 @@
 package com.betafore.evoting.ParticipantManagement;
 
-import com.betafore.evoting.EmploymentManagement.EmployeeRepository;
 import com.betafore.evoting.Exception.CustomException;
 import com.betafore.evoting.ExpoManagement.ExpoRepository;
-import com.betafore.evoting.OrganizerManagement.Organizer;
 import com.betafore.evoting.OrganizerManagement.OrganizerRepository;
-import com.betafore.evoting.VIP_GuestManagement.VIP_GuestRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.rmi.server.ExportException;
 import java.util.List;
-import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
@@ -21,8 +16,6 @@ public class ParticipantService implements ParticipantDao {
     private final ParticipantRepository participantRepository;
     private final OrganizerRepository organizerRepository;
     private final ExpoRepository expoRepository;
-    private final EmployeeRepository employeeRepository;
-    private final VIP_GuestRepository vip_guestRepository;
 
     @Override
     public Participant findById(Long id) throws CustomException {

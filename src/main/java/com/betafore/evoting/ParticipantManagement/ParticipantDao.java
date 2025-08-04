@@ -1,7 +1,6 @@
 package com.betafore.evoting.ParticipantManagement;
 
 import com.betafore.evoting.Exception.CustomException;
-import com.betafore.evoting.dao.Dao;
 
 import java.util.List;
 
