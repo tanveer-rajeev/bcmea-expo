@@ -50,4 +50,3 @@ public class SuperAdminInitializer implements CommandLineRunner {
         service.createSuperAdmin(superAdmin, superAdminRole);
     }
 }
-
