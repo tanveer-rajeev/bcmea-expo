@@ -1,0 +1,51 @@
+spring:
+    config:
+        activate:
+            on-profile: prod
+
+    datasource:
+        url: ${DB_URL}
+        username: ${DB_USERNAME}
+        password: ${DB_PASSWORD}
+
+    jpa:
+        show-sql: false
+        hibernate:
+            ddl-auto: update
+            naming:
+                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL8Dialect
+            javax:
+                persistence:
+                    validation:
+                        mode: none
+
+application:
+    mail:
+        host: smtp.zoho.com
+        port: 465
+        username: ${MAIL_USERNAME}
+        password: ${MAIL_PASSWORD}
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    ssl:
+                        enable: true
+                transport:
+                    protocol: smtp
+                debug: false
+
+    phoneNumber: ${ADMIN_PHONE}
+    email: ${ADMIN_EMAIL}
+    password: ${ADMIN_PASSWORD}
+    enabled: true
+    role: SUPER_ADMIN
+
+logging:
+    level:
+        root: WARN
+    pattern:
+        console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36}.%M - %msg%n"

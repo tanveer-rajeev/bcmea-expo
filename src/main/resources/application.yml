@@ -1,65 +1,28 @@
 spring:
-    datasource:
-       url:  jdbc:mysql://localhost:3306/bcmea_expo?sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false
-       username: root
-       password: root
-
-    jpa:
-      show-sql: true
-      hibernate:
-          ddl-auto: update
-          naming:
-              physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-      properties:
-          hibernate:
-              dialect: org.hibernate.dialect.MySQL8Dialect
-          javax:
-              persistence:
-                  validation:
-                      mode: none
-
     servlet:
         multipart:
-          enabled: true
-          location: ${java.io.tmpdir}
-          max-file-size: 3MB
-          max-request-size: 3MB
+            enabled: true
+            location: ${java.io.tmpdir}
+            max-file-size: 3MB
+            max-request-size: 3MB
 
 application:
-  security:
-    jwt:
-      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
-      expiration: 86400000 # a day
-      refresh-token:
-        expiration: 604800000 # 7 days
-  mail:
-      host: smtp.zoho.com
-      port: 465
-      username: info@bcmea-vote.com
-      password: Bcmea1122@
-      properties:
-          mail:
-              smtp:
-                  auth: true
-                  ssl:
-                      enable: true
-              transport:
-                  protocol: smtp
-              debug: true
+    security:
+        jwt:
+            secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+            expiration: 86400000 # 1 day
+            refresh-token:
+                expiration: 604800000 # 7 days
 
-  phoneNumber: 01712882332
-  email: betafore@gmail.com
-  password: 123
-  enabled: true
-  role: SUPER_ADMIN
+    customCipherConfig:
+        encoder:
+            secret: 01$3456789A4C71#
+            iv: 01$3456789A4C71#
 
-  customCipherConfig:
-      encoder:
-          secret: 01$3456789A4C71#
-          iv: 01$3456789A4C71#
 
 logging:
     level:
         root: INFO
+        com.betafore.evoting: DEBUG
     pattern:
         console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36}.%M - %msg%n"

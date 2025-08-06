@@ -1,0 +1,49 @@
+spring:
+    config:
+        activate:
+            on-profile: dev
+
+    datasource:
+        url: jdbc:mysql://localhost:3306/bcmea_expo?sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false
+        username: root
+        password: root
+
+    jpa:
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+            naming:
+                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL8Dialect
+            javax:
+                persistence:
+                    validation:
+                        mode: none
+
+application:
+    mail:
+        host: smtp.devmail.com
+        port: 1025
+        username: dev@example.com
+        password: devpass
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    ssl:
+                        enable: false
+                transport:
+                    protocol: smtp
+                debug: true
+
+    phoneNumber: 01700000000
+    email: test@local.com
+    password: devpass
+    enabled: true
+    role: SUPER_ADMIN
+
+logging:
+    level:
+        root: INFO
