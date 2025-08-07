@@ -57,7 +57,19 @@ jobs:
       run: |
         mysql -h 127.0.0.1 -uroot -proot -e 'CREATE DATABASE IF NOT EXISTS bcmea_expo;'
     - name: Build with Maven
-      run: mvn clean install
+      env:
+          SPRING_PROFILES_ACTIVE: prod
+          DB_URL: jdbc:mysql://localhost:3306/bcmea_expo?sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false
+          DB_USERNAME: root
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          ENCODER_SECRET: ${{ secrets.ENCODER_SECRET }}
+          ENCODER_IV: ${{ secrets.ENCODER_IV }}
+          ADMIN_PHONE: "01799399401"
+          ADMIN_EMAIL: "md.tanveeraj@gmail.com"
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+      run: mvn clean install -Dspring.profiles.active=prod
 
     - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v5
