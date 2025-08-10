@@ -8,6 +8,7 @@ Prerequisite
 
 * JDK 17+
 * Maven 4.0.0
+* Spring Boot 3.1.8
 
 ```
 mvn install
